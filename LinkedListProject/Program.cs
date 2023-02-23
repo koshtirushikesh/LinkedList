@@ -26,16 +26,9 @@ namespace LinkedList
                 switch (option)
                 {
                     case 1:
-                        linkedList.Add(10);
-                        linkedList.Add(20);
-                        linkedList.Add(30);
-                        linkedList.Add(40);
-                        linkedList.Add(50);
-                        linkedList.Add(60);
-                        linkedList.Add(70);
-                        linkedList.Add(80);
-                        linkedList.Add(90);
-
+                        linkedList.Addfirst(56);
+                        linkedList.Addfirst(30);
+                        linkedList.Addfirst(70);
                         break;
                     case 2:
                         linkedList.Addfirst(70);
