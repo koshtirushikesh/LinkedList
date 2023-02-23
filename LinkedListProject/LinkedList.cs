@@ -4,47 +4,41 @@ namespace LinkedList
 {
     public class LinkedList
     {
-        public Node head;
+        public Node headNode;
         public void Add(int Data)
         {
-            Node node = new Node(Data);
+            Node newNode = new Node(Data);
 
-            if (this.head == null)
-                this.head = node;
+            if (this.headNode == null)
+                this.headNode = newNode;
             else
             {
-                Node temp = head;
-                while (temp.Next != null)
+                Node tempNode = headNode;
+                while (tempNode.Next != null)
                 {
-                    temp = temp.Next;
+                    tempNode = tempNode.Next;
                 }
-                temp.Next = node;
+                tempNode.Next = newNode;
             }
         }
         public void Addfirst(int data)
         {
             Node newNode = new Node(data);
-            if (this.head == null)
-                this.head = newNode;
-            else
-            {
-                Node temp = head;
-                head = newNode;
-                head.Next = temp;
-            }
+            newNode.Next = headNode;
+            headNode = newNode;
         }
         public void Display()
         {
-            Node temp = this.head;
-            if (temp == null)
+            Node tempNode = this.headNode;
+            if (tempNode == null)
             {
                 Console.WriteLine("Linked list is empty");
             }
             Console.Write("Linked list is: ");
-            while (temp != null)
+            while (tempNode != null)
             {
-                Console.Write(temp.Data + " ");
-                temp = temp.Next;
+                Console.Write(tempNode.Data + " ");
+                tempNode = tempNode.Next;
             }
             Console.WriteLine("\n");
         }

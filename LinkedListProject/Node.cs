@@ -14,5 +14,10 @@ namespace LinkedList
         {
             Data = data;
         }
+        public Node(int data,Node next)
+        {
+            Data = data;
+            Next = next;
+        }
     }
 }
