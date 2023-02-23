@@ -5,6 +5,7 @@ namespace LinkedList
     public class LinkedList
     {
         public Node headNode;
+        public Node tailNode;
         public void Add(int Data)
         {
             Node newNode = new Node(Data);
@@ -21,11 +22,22 @@ namespace LinkedList
                 tempNode.Next = newNode;
             }
         }
-        public void Addfirst(int data)
+        public void AddFirst(int data)
         {
             Node newNode = new Node(data);
             newNode.Next = headNode;
             headNode = newNode;
+        }
+        public void AddLast(int data)
+        {
+            Node newNode = new Node(data);
+            if (headNode == null)
+                tailNode = headNode = newNode;
+            else
+            {
+                tailNode.Next = newNode;
+                tailNode = newNode;
+            }
         }
         public void Display()
         {
@@ -34,13 +46,16 @@ namespace LinkedList
             {
                 Console.WriteLine("Linked list is empty");
             }
-            Console.Write("Linked list is: ");
-            while (tempNode != null)
+            else
             {
-                Console.Write(tempNode.Data + " ");
-                tempNode = tempNode.Next;
+                Console.Write("Linked list is: ");
+                while (tempNode != null)
+                {
+                    Console.Write(tempNode.Data + " ");
+                    tempNode = tempNode.Next;
+                }
+                Console.WriteLine("\n");
             }
-            Console.WriteLine("\n");
         }
     }
 }
