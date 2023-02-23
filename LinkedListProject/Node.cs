@@ -8,14 +8,11 @@ namespace LinkedList
 {
     public class Node
     {
-        //public int Data;
-        //public Node Next;
-        //public Node(int Data) 
-        //{
-        //    this.Data = Data;
-        //}
-
-        public int Data { get; set; }
-        public Node Next { get; set; }
+        public int Data;
+        public Node Next;
+        public Node(int data)
+        {
+            Data = data;
+        }
     }
 }

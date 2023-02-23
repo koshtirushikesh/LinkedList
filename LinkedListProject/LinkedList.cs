@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinkedList
 {
@@ -11,8 +7,8 @@ namespace LinkedList
         public Node head;
         public void Add(int Data)
         {
-            Node node = new Node();
-            node.Data = Data;
+            Node node = new Node(Data);
+
             if (this.head == null)
                 this.head = node;
             else
@@ -23,6 +19,18 @@ namespace LinkedList
                     temp = temp.Next;
                 }
                 temp.Next = node;
+            }
+        }
+        public void Addfirst(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+                this.head = newNode;
+            else
+            {
+                Node temp = head;
+                head = newNode;
+                head.Next = temp;
             }
         }
         public void Display()
@@ -39,6 +47,6 @@ namespace LinkedList
                 temp = temp.Next;
             }
             Console.WriteLine("\n");
-        } 
+        }
     }
 }
