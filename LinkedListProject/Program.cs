@@ -17,6 +17,7 @@ namespace LinkedList
                 Console.WriteLine("2.AddFirst");
                 Console.WriteLine("3.AddLast");
                 Console.WriteLine("4.Remove the First Node");
+                Console.WriteLine("5.Remove the Last Node");
                 Console.WriteLine("6.Display");
                 Console.Write("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -49,6 +50,12 @@ namespace LinkedList
                         linkedList.Add(30);
                         linkedList.Add(70);
                         linkedList.RemoveFirstNode();
+                        break;
+                    case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
                         break;
                     case 6:
                         linkedList.Display();
