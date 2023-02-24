@@ -25,8 +25,14 @@ namespace LinkedList
         public void AddFirst(int data)
         {
             Node newNode = new Node(data);
-            newNode.Next = headNode;
-            headNode = newNode;
+            if (headNode == null)
+                tailNode = headNode = newNode;
+            else
+            {
+                newNode.Next = headNode;
+                headNode = newNode;
+            }
+            
         }
         public void AddLast(int data)
         {
@@ -53,7 +59,16 @@ namespace LinkedList
             }
             Console.WriteLine(newNode.Data +" is inserted into the linked list");
         }
-        
+        public void RemoveFirstNode()
+        {
+            if (headNode == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            this.headNode = this.headNode.Next;
+            Console.WriteLine("the first element is deleted");
+        }
+
         public void Display()
         {
             Node tempNode = this.headNode;
