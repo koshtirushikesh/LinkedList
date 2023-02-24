@@ -6,9 +6,9 @@ namespace LinkedList
     {
         public Node headNode;
         public Node tailNode;
-        public void Add(int Data)
+        public void Add(int data)
         {
-            Node newNode = new Node(Data);
+            Node newNode = new Node(data);
 
             if (this.headNode == null)
                 this.headNode = newNode;
@@ -39,6 +39,21 @@ namespace LinkedList
                 tailNode = newNode;
             }
         }
+        public void ReversOrder(int data)
+        {
+            Node newNode = new Node(data);
+
+            if (this.headNode == null)
+                this.headNode = newNode;
+            else
+            {
+                Node tempNode = this.headNode;
+                headNode = newNode;
+                headNode.Next = tempNode;
+            }
+            Console.WriteLine(newNode.Data +" is inserted into the linked list");
+        }
+        
         public void Display()
         {
             Node tempNode = this.headNode;
