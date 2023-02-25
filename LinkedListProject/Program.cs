@@ -9,7 +9,7 @@ namespace LinkedList
         {
             bool flag = true;
             LinkedList linkedList = new LinkedList();
-            
+
             while (flag)
             {
                 Console.WriteLine("1.Add");
@@ -19,6 +19,7 @@ namespace LinkedList
                 Console.WriteLine("5.Remove the Last Node");
                 Console.WriteLine("6.Find");
                 Console.WriteLine("7.Size");
+                Console.WriteLine("8.Add After");
                 Console.WriteLine("9.Display");
                 Console.Write("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -77,6 +78,14 @@ namespace LinkedList
                         linkedList.Add(70);
                         linkedList.Display();
                         linkedList.Size();
+                        break;
+                    case 8:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.Display();
+                        linkedList.AddAfter(30, 40);
+                        linkedList.Display();
                         break;
                     case 9:
                         linkedList.Display();

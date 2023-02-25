@@ -62,6 +62,28 @@ namespace LinkedList
             }
             Console.WriteLine(newNode.Data +" is inserted into the linked list");
         }
+        public void AddAfter(int AfterData, int data)
+        {
+            Node newNode = new Node(data);
+            if (this.headNode == null)
+                this.headNode = newNode;
+            else
+            {
+                Node tempNode = headNode;
+                while (tempNode.Data != AfterData)
+                {
+                    tempNode = tempNode.Next;
+                }
+                if (tempNode.Data == AfterData)
+                {
+                    Node afterNode = tempNode.Next;
+                    tempNode.Next = newNode;
+                    newNode.Next = afterNode;
+                }
+                else
+                    Console.WriteLine(" Data not found ");
+            }
+        }
         public void RemoveFirstNode()
         {
             if (headNode == null)
