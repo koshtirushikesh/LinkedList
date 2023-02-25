@@ -9,10 +9,12 @@ namespace LinkedList
         {
             bool flag = true;
             LinkedList linkedList = new LinkedList();
+            LinkedListStack stack = new LinkedListStack();
 
             while (flag)
             {
-                Console.WriteLine("1.Add");
+
+                Console.WriteLine("\n1.Add");
                 Console.WriteLine("2.AddFirst");
                 Console.WriteLine("3.AddLast");
                 Console.WriteLine("4.Remove the First Node");
@@ -20,10 +22,12 @@ namespace LinkedList
                 Console.WriteLine("6.Find");
                 Console.WriteLine("7.Size");
                 Console.WriteLine("8.Add After");
-                Console.WriteLine("9.Display");
+                Console.WriteLine("9.Display linkedlist");
+                Console.WriteLine("10.LinedList Stack Push");
+                Console.WriteLine("11.LinedList Stack Pop");
                 Console.Write("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("");
+                Console.WriteLine();
                 switch (option)
                 {
                     case 1:
@@ -90,6 +94,13 @@ namespace LinkedList
                     case 9:
                         linkedList.Display();
                         break;
+                    case 10:
+                        stack.Push(56);
+                        stack.Push(30);
+                        stack.Push(70);
+                        stack.Display();
+                        break;
+                    
                     default: Console.WriteLine("Please Enter Currect Option"); break;
                 }
             }
