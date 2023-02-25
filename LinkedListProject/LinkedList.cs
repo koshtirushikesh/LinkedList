@@ -22,6 +22,8 @@ namespace LinkedList
                 tempNode.Next = newNode;
             }
         }
+        
+            
         public void AddFirst(int data)
         {
             Node newNode = new Node(data);
@@ -45,6 +47,7 @@ namespace LinkedList
                 tailNode = newNode;
             }
         }
+        
         public void ReversOrder(int data)
         {
             Node newNode = new Node(data);
@@ -89,7 +92,45 @@ namespace LinkedList
                 Console.WriteLine("the last element is deleted");
             }
         }
+        public void Find(int FindData)
+        {
+            int count = 0;
+            Node tempNode = this.headNode;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
+            {
+                while (tempNode != null)
+                {
+                    if (tempNode.Data.Equals(FindData))
+                    {
+                        count++;
+                    }
+                    tempNode = tempNode.Next;
+                }
+            }
+            if (count > 0)
+                Console.WriteLine(FindData + " data found " + count + ": time ");
+            else
+                Console.WriteLine(" data not found\n");
+        }
 
+        public void Size()
+        {
+            int size = 0;
+            Node tempNode = this.headNode;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
+            {
+                while (tempNode != null)
+                {
+                    tempNode = tempNode.Next;
+                    size++;
+                }
+                Console.WriteLine("Size :"+size);
+            }
+        }
         public void Display()
         {
             Node tempNode = this.headNode;
