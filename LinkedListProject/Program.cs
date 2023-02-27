@@ -113,7 +113,11 @@ namespace LinkedList
                         queues.Enqueue(30);
                         queues.Display();
                         break;
-                   
+                    case 13:
+                        queues.Display();
+                        queues.Dequeue();
+                        queues.Display();
+                        break;
 
 
                     default: Console.WriteLine("Please Enter Currect Option"); break;
