@@ -26,7 +26,6 @@ namespace LinkedList
             Console.WriteLine(data);
             //linkedList.Add(data);
         }
-
         public void Display()
         {
             Node temp = this.top;

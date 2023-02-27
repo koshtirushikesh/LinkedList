@@ -10,6 +10,7 @@ namespace LinkedList
             bool flag = true;
             LinkedList linkedList = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedListQueues queues = new LinkedListQueues();
 
             while (flag)
             {
@@ -25,6 +26,8 @@ namespace LinkedList
                 Console.WriteLine("9.Display linkedlist");
                 Console.WriteLine("10.LinedList Stack Push");
                 Console.WriteLine("11.LinedList Stack Pop");
+                Console.WriteLine("12.LinedList Queue Enqueue");
+                Console.WriteLine("13.LinedList Queue Dequeue");
                 Console.Write("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -100,7 +103,19 @@ namespace LinkedList
                         stack.Push(70);
                         stack.Display();
                         break;
-                    
+                    case 11:
+                        stack.Pop();
+                        stack.Display();
+                        break;
+                    case 12:
+                        queues.Enqueue(10);
+                        queues.Enqueue(20);
+                        queues.Enqueue(30);
+                        queues.Display();
+                        break;
+                   
+
+
                     default: Console.WriteLine("Please Enter Currect Option"); break;
                 }
             }
